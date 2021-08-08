@@ -23,8 +23,6 @@ typealias CalclateBurnedCalories = ((Double) -> Void)
     @objc optional func stopPedometerEvents()
 }
 
-
-
 class PedometerViewModel{
     fileprivate var activityManager = CMMotionActivityManager()
     fileprivate var pedometer = CMPedometer()
