@@ -1,7 +1,7 @@
 # PedometerHelper
 
 ## Description
-A simple pedometer app that written in mvvm architecture
+A simple pedometer app that written in Swift 5 and mvvm architecture
 
 ## Usage
 This is a simple pedometer code that allows you to fetch CoreMotion datas directly from sensors.
