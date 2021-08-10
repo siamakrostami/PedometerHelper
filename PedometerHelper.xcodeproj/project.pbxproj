@@ -9,29 +9,31 @@
 /* Begin PBXBuildFile section */
 		011DBDCC26BEF96500EF4C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDCB26BEF96500EF4C6A /* AppDelegate.swift */; };
 		011DBDCE26BEF96500EF4C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDCD26BEF96500EF4C6A /* SceneDelegate.swift */; };
-		011DBDD026BEF96500EF4C6A /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDCF26BEF96500EF4C6A /* PedometerViewController.swift */; };
 		011DBDD326BEF96500EF4C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011DBDD126BEF96500EF4C6A /* Main.storyboard */; };
 		011DBDD526BEF96800EF4C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011DBDD426BEF96800EF4C6A /* Assets.xcassets */; };
 		011DBDD826BEF96800EF4C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011DBDD626BEF96800EF4C6A /* LaunchScreen.storyboard */; };
-		011DBDE726BEF9C500EF4C6A /* PedometerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDE626BEF9C500EF4C6A /* PedometerViewModel.swift */; };
 		011DBDEA26BEFBC300EF4C6A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDE926BEFBC300EF4C6A /* Gender.swift */; };
 		011DBDEC26BEFBD900EF4C6A /* CaloriesStaticDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDEB26BEFBD900EF4C6A /* CaloriesStaticDefaults.swift */; };
 		011DBDEF26BF087700EF4C6A /* Int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011DBDEE26BF087700EF4C6A /* Int64.swift */; };
+		017A3B4B26C26D8A00423A73 /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A3B4A26C26D8A00423A73 /* PedometerViewController.swift */; };
+		017A3B4D26C26D9E00423A73 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A3B4C26C26D9E00423A73 /* Pedometer.swift */; };
+		017A3B4F26C26DB000423A73 /* ActivityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A3B4E26C26DB000423A73 /* ActivityStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		011DBDC826BEF96500EF4C6A /* PedometerHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedometerHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		011DBDCB26BEF96500EF4C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		011DBDCD26BEF96500EF4C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		011DBDCF26BEF96500EF4C6A /* PedometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerViewController.swift; sourceTree = "<group>"; };
 		011DBDD226BEF96500EF4C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		011DBDD426BEF96800EF4C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011DBDD726BEF96800EF4C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011DBDD926BEF96800EF4C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		011DBDE626BEF9C500EF4C6A /* PedometerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerViewModel.swift; sourceTree = "<group>"; };
 		011DBDE926BEFBC300EF4C6A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		011DBDEB26BEFBD900EF4C6A /* CaloriesStaticDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesStaticDefaults.swift; sourceTree = "<group>"; };
 		011DBDEE26BF087700EF4C6A /* Int64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64.swift; sourceTree = "<group>"; };
+		017A3B4A26C26D8A00423A73 /* PedometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerViewController.swift; sourceTree = "<group>"; };
+		017A3B4C26C26D9E00423A73 /* Pedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
+		017A3B4E26C26DB000423A73 /* ActivityStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,7 @@
 		011DBDE326BEF99E00EF4C6A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				011DBDE626BEF9C500EF4C6A /* PedometerViewModel.swift */,
+				017A3B4C26C26D9E00423A73 /* Pedometer.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -121,7 +123,7 @@
 		011DBDE526BEF9AB00EF4C6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				011DBDCF26BEF96500EF4C6A /* PedometerViewController.swift */,
+				017A3B4A26C26D8A00423A73 /* PedometerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 		011DBDE826BEFBB000EF4C6A /* Enum & statics */ = {
 			isa = PBXGroup;
 			children = (
+				017A3B4E26C26DB000423A73 /* ActivityStatus.swift */,
 				011DBDE926BEFBC300EF4C6A /* Gender.swift */,
 				011DBDEB26BEFBD900EF4C6A /* CaloriesStaticDefaults.swift */,
 			);
@@ -213,11 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011DBDE726BEF9C500EF4C6A /* PedometerViewModel.swift in Sources */,
+				017A3B4F26C26DB000423A73 /* ActivityStatus.swift in Sources */,
+				017A3B4B26C26D8A00423A73 /* PedometerViewController.swift in Sources */,
 				011DBDEA26BEFBC300EF4C6A /* Gender.swift in Sources */,
 				011DBDEF26BF087700EF4C6A /* Int64.swift in Sources */,
-				011DBDD026BEF96500EF4C6A /* PedometerViewController.swift in Sources */,
 				011DBDCC26BEF96500EF4C6A /* AppDelegate.swift in Sources */,
+				017A3B4D26C26D9E00423A73 /* Pedometer.swift in Sources */,
 				011DBDCE26BEF96500EF4C6A /* SceneDelegate.swift in Sources */,
 				011DBDEC26BEFBD900EF4C6A /* CaloriesStaticDefaults.swift in Sources */,
 			);

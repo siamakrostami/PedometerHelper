@@ -20,9 +20,8 @@ class PedometerViewController: UIViewController {
         }
     }
     
-    fileprivate var pedometerViewModel : PedometerViewModel!
-    fileprivate var timer : Timer!
-    fileprivate var time = Int64()
+    fileprivate var pedometerViewModel : Pedometer!
+    fileprivate var isStarted : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,40 +29,32 @@ class PedometerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /// start or stop calculation
     @IBAction func startPedometer(_ sender: Any) {
-        if self.pedometerViewModel.pedometerIsStarted{
-            self.pedometerViewModel.pedometerIsStarted = false
+        if self.isStarted{
+            self.isStarted = false
             self.stopPedometer()
             self.startOutlet.setTitle("Start", for: .normal)
             self.startOutlet.backgroundColor = .systemBlue
         }else{
-            self.pedometerViewModel.pedometerIsStarted = true
+            self.isStarted = true
             self.startPedometer()
-            self.initializeTimer()
             self.getActivityStatus()
             self.startOutlet.setTitle("Stop", for: .normal)
             self.startOutlet.backgroundColor = .systemPink
         }
     }
-    
 }
 
 extension PedometerViewController{
     
     fileprivate func initializeViewControllerVariables(){
-        self.pedometerViewModel = PedometerViewModel(weight: 85, gender: .male)
-    }
-    
-    @objc func updateTimer(){
-        self.time += 1
-        self.pedometerViewModel.currentDuration = self.time
-        self.getCalories()
-        DispatchQueue.main.async {
-            self.durationLabel.text = self.time.FormatTime()
-        }
+        self.pedometerViewModel = Pedometer(weight: 85, gender: .male)
+        self.pedometerViewModel.delegate = self
     }
     
     fileprivate func startPedometer(){
+        self.pedometerViewModel.initializeTimer()
         self.pedometerViewModel.getPedometerData(starts: Date()) { data, error in
             if error == nil{
                 DispatchQueue.main.async {
@@ -75,39 +66,18 @@ extension PedometerViewController{
     
     fileprivate func stopPedometer(){
         self.pedometerViewModel.stopPedometer()
-        self.deinitTimer()
     }
     
     fileprivate func getActivityStatus(){
         self.pedometerViewModel.currentPedometerActicityStatus { data in
-            guard let activity = data else{return}
-            self.setActivityStatus(currentStatus: activity)
+            self.setActivityStatus(currentStatus: data)
         }
     }
     
-    fileprivate func setActivityStatus(currentStatus : CMMotionActivity){
+    fileprivate func setActivityStatus(currentStatus : CurrentActivityStatus){
         DispatchQueue.main.async {
-            if currentStatus.stationary{
-                self.activityStatusLabel.text = "stationary"
-            }
-            if currentStatus.automotive{
-                self.activityStatusLabel.text = "automotive"
-            }
-            if currentStatus.running{
-                self.activityStatusLabel.text = "running"
-            }
-            if currentStatus.cycling{
-                self.activityStatusLabel.text = "cycling"
-            }
-            if currentStatus.walking{
-                self.activityStatusLabel.text = "walking"
-            }
-            if currentStatus.unknown{
-                self.activityStatusLabel.text = "unknown"
-            }
-            
+            self.activityStatusLabel.text = currentStatus.rawValue
         }
-        
     }
     
     fileprivate func getCalories(){
@@ -122,15 +92,16 @@ extension PedometerViewController{
         }
     }
     
-    fileprivate func initializeTimer(){
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
     
-    fileprivate func deinitTimer(){
-        if timer != nil{
-            self.timer.invalidate()
+}
+
+extension PedometerViewController : DurationProtocol{
+    func currentDuration(duration: Int64) {
+        DispatchQueue.main.async {
+            self.durationLabel.text = duration.FormatTime()
         }
     }
+    
     
 }
 
